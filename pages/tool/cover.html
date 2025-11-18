@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <style type="text/css"><!--
+
+    --></style>
+
+    <script type="text/javascript" src="lib/include.js"></script>
+    <script type="text/javascript"><!--
+
+        "use strict";
+
+        function go() {
+
+            // セルのサイズと横セル数
+            const COLORS = [
+                "rgb(255, 0, 0, 0.75)", "rgb(255, 0, 0, 0.50)", "rgb(  0, 255, 0, 0.75)", "rgb(  0, 255, 0, 0.50)",
+                "rgb(0, 0, 255, 0.75)", "rgb(0, 0, 255, 0.50)", "rgb(255, 255, 0, 0.75)", "rgb(255, 255, 0, 0.50)",
+            ];
+            const SIZE = 32, NUMX = 4;
+            const NUMY = Math.ceil(COLORS.length/NUMX);
+
+            // 描画先の canvas を作成。
+            var canvas = document.createElement("canvas");
+            canvas.width = SIZE * NUMX;
+            canvas.height = SIZE * NUMY;
+            var context = canvas.getContext("2d");
+
+            // 一セルずつ描画していく。
+            for(var i = 0 ; i < COLORS.length ; i++) {
+
+                var color = COLORS[i];
+
+                var x = i % NUMX;
+                var y = Math.floor(i / NUMX);
+
+                context.fillStyle = color;
+                context.fillRect(x*SIZE, y*SIZE, SIZE, SIZE);
+            }
+
+            // 作成したキャンバスの内容を <img> に表示。
+            document.getElementById("img").src = canvas.toDataURL();
+        }
+
+        function go2() {
+
+        }
+
+    --></script>
+
+  </head>
+
+  <body>
+
+    <button onclick="go()">go</button><button onclick="go2()">go2</button><br />
+
+    <p><img id="img" /></p>
+
+  </body>
+</html>
+

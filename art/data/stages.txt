@@ -1,0 +1,1477 @@
+
+[stage01]
+
+    {
+        "map": "stage01",
+        "music": "stage01-mu",
+        "gimmicks": {
+            "start": {
+                "trigger": "started",
+                "command": {
+                    "type": "batch",
+                    "commands": [
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー01", "union":"ally", "class":"close", "level":14, "pos":[ 4, 8], "direction":"right", "brain":"input", "tags":["left-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー02", "union":"ally", "class":"close", "level":14, "pos":[ 7, 8], "direction":"right", "brain":"input"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー03", "union":"ally", "class":"close", "level":14, "pos":[10, 8], "direction":"right", "brain":"input", "tags":["right-leader"]
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01", "union":"ally", "class":"close", "level":5, "pos":[ 2, 6], "direction":"right", "mission":{"type":"follow", "leader":"left-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02", "union":"ally", "class":"close", "level":5, "pos":[12, 6], "direction":"right", "mission":{"type":"follow", "leader":"right-leader"}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01", "union":"foe", "class":"close", "level":5, "pos":[ 2,13], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02", "union":"foe", "class":"close", "level":5, "pos":[ 4,14], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵03", "union":"foe", "class":"close", "level":5, "pos":[ 6,14], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵04", "union":"foe", "class":"close", "level":5, "pos":[ 8,14], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵05", "union":"foe", "class":"close", "level":5, "pos":[10,14], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵06", "union":"foe", "class":"close", "level":5, "pos":[12,13], "direction":"left"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+
+[stage02]
+
+    {
+        "map": "stage02",
+        "music": "stage02-mu",
+        "gimmicks": {
+            "start": {
+                "trigger": "started",
+                "command": {
+                    "type": "batch",
+                    "commands": [
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー01", "union":"ally", "class":"close", "level":14, "pos":[10, 5], "direction":"right", "brain":"input", "tags":["leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01", "union":"ally", "class":"close", "level":7, "pos":[11, 4], "direction":"right", "mission":{"type":"follow", "leader":"leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02", "union":"ally", "class":"close", "level":7, "pos":[11, 6], "direction":"right", "mission":{"type":"follow", "leader":"leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方03", "union":"ally", "class":"close", "level":7, "pos":[ 9, 4], "direction":"right", "mission":{"type":"follow", "leader":"leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方04", "union":"ally", "class":"close", "level":7, "pos":[ 9, 6], "direction":"right", "mission":{"type":"follow", "leader":"leader"}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-1", "union":"foe", "class":"close", "level":7, "pos":[21, 4], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-2", "union":"foe", "class":"close", "level":7, "pos":[22, 5], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-3", "union":"foe", "class":"close", "level":7, "pos":[21, 6], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-1", "union":"foe", "class":"close", "level":7, "pos":[ 3,10], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-2", "union":"foe", "class":"close", "level":7, "pos":[ 4,11], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-3", "union":"foe", "class":"close", "level":7, "pos":[ 5,11], "direction":"left"
+                            }
+                        },
+                        {"type": "popup", "graph": "tutorial-2"}
+                    ]
+                }
+            }
+        }
+    }
+
+[stage03]
+
+    {
+        "map": "stage03",
+        "music": "stage03-mu",
+        "gimmicks": {
+            "start": {
+                "trigger": "started",
+                "command": {
+                    "type": "batch",
+                    "commands": [
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー01", "union":"ally", "class":"close", "level":18, "pos":[ 2, 8], "direction":"right", "brain":"input", "tags":["middle-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-1", "union":"ally", "class":"close", "level":9, "pos":[ 1, 7], "direction":"right", "mission":{"type":"follow", "leader":"middle-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-2", "union":"ally", "class":"close", "level":9, "pos":[ 1, 8], "direction":"right", "mission":{"type":"follow", "leader":"middle-leader"}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー02", "union":"ally", "class":"close", "level":18, "pos":[ 4, 3], "direction":"right", "brain":"input", "tags":["upper-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-1", "union":"ally", "class":"close", "level":9, "pos":[ 3, 2], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-2", "union":"ally", "class":"close", "level":9, "pos":[ 3, 4], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー03", "union":"ally", "class":"close", "level":18, "pos":[ 4,12], "direction":"right", "brain":"input", "tags":["lower-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方03-1", "union":"ally", "class":"close", "level":9, "pos":[ 3,11], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方03-2", "union":"ally", "class":"close", "level":9, "pos":[ 3,13], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01", "union":"foe", "class":"close", "level":9, "pos":[13, 3], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02", "union":"foe", "class":"close", "level":9, "pos":[14, 2], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵03", "union":"foe", "class":"close", "level":9, "pos":[13,13], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵04", "union":"foe", "class":"close", "level":9, "pos":[14,12], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵05", "union":"foe", "class":"mid", "level":21, "pos":[21, 7], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵06", "union":"foe", "class":"mid", "level":21, "pos":[21, 8], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵07", "union":"foe", "class":"mid", "level":21, "pos":[22, 6], "direction":"left"
+                            }
+                        },
+                        {"type": "popup", "graph": "tutorial-3"}
+                    ]
+                }
+            }
+        }
+    }
+
+[stage04]
+
+    {
+        "map": "stage04",
+        "music": "stage04-mu",
+        "gimmicks": {
+            "start": {
+                "trigger": "started",
+                "command": {
+                    "type": "batch",
+                    "commands": [
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー01", "union":"ally", "class":"long", "level":19, "pos":[ 5, 4], "direction":"right", "brain":"input", "tags":["upper-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-1", "union":"ally", "class":"close", "level":13, "pos":[ 5, 2], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-2", "union":"ally", "class":"close", "level":13, "pos":[ 3, 3], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-3", "union":"ally", "class":"close", "level":13, "pos":[ 3, 4], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-4", "union":"ally", "class":"close", "level":13, "pos":[ 5, 6], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー02", "union":"ally", "class":"long", "level":19, "pos":[ 5,11], "direction":"right", "brain":"input", "tags":["lower-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-1", "union":"ally", "class":"close", "level":13, "pos":[ 4,10], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-1", "union":"ally", "class":"close", "level":13, "pos":[ 3,11], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-1", "union":"ally", "class":"close", "level":13, "pos":[ 4,12], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-1", "union":"ally", "class":"close", "level":13, "pos":[ 5,13], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-1", "union":"foe", "class":"close", "level":13, "pos":[12, 3], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-2", "union":"foe", "class":"close", "level":13, "pos":[13, 4], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-1", "union":"foe", "class":"mid", "level":19, "pos":[21, 4], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-2", "union":"foe", "class":"mid", "level":19, "pos":[22, 3], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵03-1", "union":"foe", "class":"close", "level":13, "pos":[12,10], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵03-2", "union":"foe", "class":"close", "level":13, "pos":[13,11], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵04-1", "union":"foe", "class":"mid", "level":19, "pos":[21,11], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵04-2", "union":"foe", "class":"mid", "level":19, "pos":[22,12], "direction":"left"
+                            }
+                        },
+                        {"type": "popup", "graph": "tutorial-4"}
+                    ]
+                }
+            }
+        }
+    }
+
+[stage05]
+
+    {
+        "map": "stage05",
+        "music": "stage05-mu",
+        "gimmicks": {
+            "start": {
+                "trigger": "started",
+                "command": {
+                    "type": "batch",
+                    "commands": [
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー01", "union":"ally", "class":"close", "level":23, "pos":[ 7, 4], "direction":"right", "brain":"input", "tags":["upper-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-1", "union":"ally", "class":"long", "level":19, "pos":[ 5, 3], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-2", "union":"ally", "class":"long", "level":19, "pos":[ 9, 3], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-3", "union":"ally", "class":"long", "level":19, "pos":[10, 4], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-1", "union":"foe", "class":"long", "level":19, "pos":[ 6,15], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-2", "union":"foe", "class":"long", "level":19, "pos":[ 8,15], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-3", "union":"foe", "class":"long", "level":19, "pos":[10,14], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-4", "union":"foe", "class":"long", "level":19, "pos":[ 3,15], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-5", "union":"foe", "class":"long", "level":19, "pos":[ 7,14], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-6", "union":"foe", "class":"long", "level":19, "pos":[10,15], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-1", "union":"foe", "class":"mid", "level":19, "pos":[ 5,14], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-2", "union":"foe", "class":"mid", "level":19, "pos":[ 6,13], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-3", "union":"foe", "class":"mid", "level":19, "pos":[ 8,13], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-4", "union":"foe", "class":"mid", "level":19, "pos":[ 4,16], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-5", "union":"foe", "class":"mid", "level":19, "pos":[ 7,17], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-6", "union":"foe", "class":"mid", "level":19, "pos":[ 9,19], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー02", "union":"ally", "class":"close", "level":23, "pos":[ 7,26], "direction":"right", "brain":"input", "tags":["lower-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-1", "union":"ally", "class":"long", "level":19, "pos":[ 5,27], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-2", "union":"ally", "class":"long", "level":19, "pos":[ 7,27], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-3", "union":"ally", "class":"long", "level":19, "pos":[ 9,27], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+                        {"type": "popup", "graph": "tutorial-5"}
+                    ]
+                }
+            }
+        }
+    }
+
+[stage06]
+
+    {
+        "map": "stage06",
+        "music": "stage06-mu",
+        "gimmicks": {
+            "start": {
+                "trigger": "started",
+                "command": {
+                    "type": "batch",
+                    "commands": [
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー01", "union":"ally", "class":"mid", "level":27, "pos":[ 5, 6], "direction":"right", "brain":"input", "tags":["upper-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-1", "union":"ally", "class":"long", "level":22, "pos":[ 3, 4], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-2", "union":"ally", "class":"long", "level":22, "pos":[ 2, 6], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー02", "union":"ally", "class":"mid", "level":27, "pos":[ 8,10], "direction":"right", "brain":"input", "tags":["lower-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-1", "union":"ally", "class":"long", "level":22, "pos":[ 6, 9], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-2", "union":"ally", "class":"long", "level":22, "pos":[ 6,11], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-1", "union":"foe", "class":"close", "level":22, "pos":[14, 6], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-2", "union":"foe", "class":"close", "level":22, "pos":[16, 4], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-3", "union":"foe", "class":"close", "level":22, "pos":[15, 9], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-4", "union":"foe", "class":"close", "level":22, "pos":[22, 3], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-1", "union":"foe", "class":"mid", "level":22, "pos":[17, 7], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-2", "union":"foe", "class":"mid", "level":22, "pos":[21, 6], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-3", "union":"foe", "class":"mid", "level":22, "pos":[24, 5], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-4", "union":"foe", "class":"mid", "level":22, "pos":[26, 6], "direction":"left"
+                            }
+                        },
+                        {"type": "popup", "graph": "tutorial-6"}
+                    ]
+                }
+            }
+        }
+    }
+
+[stage07]
+
+    {
+        "map": "stage07",
+        "music": "stage07-mu",
+        "gimmicks": {
+            "start": {
+                "trigger": "started",
+                "command": {
+                    "type": "batch",
+                    "commands": [
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー01", "union":"ally", "class":"mid", "level":31, "pos":[11,16], "direction":"right", "brain":"input", "tags":["upper-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-1", "union":"ally", "class":"close", "level":26, "pos":[12,17], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-2", "union":"ally", "class":"close", "level":26, "pos":[13,16], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー02", "union":"ally", "class":"close", "level":31, "pos":[14,18], "direction":"right", "brain":"input", "tags":["lower-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-1", "union":"ally", "class":"mid", "level":26, "pos":[15,16], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-2", "union":"ally", "class":"close", "level":26, "pos":[16,17], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-1", "union":"foe", "class":"close", "level":28, "pos":[14, 9], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-2", "union":"foe", "class":"close", "level":28, "pos":[16, 7], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-3", "union":"foe", "class":"close", "level":28, "pos":[17, 5], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-4", "union":"foe", "class":"close", "level":28, "pos":[14, 5], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-5", "union":"foe", "class":"close", "level":28, "pos":[16, 7], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-6", "union":"foe", "class":"close", "level":28, "pos":[12, 3], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-1", "union":"foe", "class":"long", "level":28, "pos":[10, 5], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-2", "union":"foe", "class":"long", "level":28, "pos":[ 9, 4], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-3", "union":"foe", "class":"long", "level":28, "pos":[ 7, 3], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-4", "union":"foe", "class":"long", "level":28, "pos":[ 6, 5], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-5", "union":"foe", "class":"long", "level":28, "pos":[ 5, 3], "direction":"left"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+
+[stage08]
+
+    {
+        "map": "stage08",
+        "music": "stage08-mu",
+        "gimmicks": {
+            "start": {
+                "trigger": "started",
+                "command": {
+                    "type": "batch",
+                    "commands": [
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー01", "union":"ally", "class":"close", "level":36, "pos":[ 2, 2], "direction":"right", "brain":"input", "tags":["upper-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-1", "union":"ally", "class":"mid", "level":36, "pos":[ 3, 1], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01-2", "union":"ally", "class":"long", "level":36, "pos":[ 2, 3], "direction":"right", "mission":{"type":"follow", "leader":"upper-leader"}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー02", "union":"ally", "class":"mid", "level":36, "pos":[ 4, 7], "direction":"right", "brain":"input", "tags":["middle-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-1", "union":"ally", "class":"long", "level":36, "pos":[ 2, 7], "direction":"right", "mission":{"type":"follow", "leader":"middle-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02-2", "union":"ally", "class":"close", "level":36, "pos":[ 3, 8], "direction":"right", "mission":{"type":"follow", "leader":"middle-leader"}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"リーダー03", "union":"ally", "class":"long", "level":36, "pos":[ 3,12], "direction":"right", "brain":"input", "tags":["lower-leader"]
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方03-1", "union":"ally", "class":"close", "level":36, "pos":[ 2,11], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方03-2", "union":"ally", "class":"mid", "level":36, "pos":[ 3,14], "direction":"right", "mission":{"type":"follow", "leader":"lower-leader"}
+                            }
+                        },
+
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-1", "union":"foe", "class":"close", "level":36, "pos":[14, 2], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-2", "union":"foe", "class":"mid", "level":36, "pos":[13, 1], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01-3", "union":"foe", "class":"long", "level":36, "pos":[13, 3], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02", "union":"foe", "class":"mid", "level":36, "pos":[13, 7], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-2", "union":"foe", "class":"long", "level":36, "pos":[12, 6], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02-3", "union":"foe", "class":"close", "level":36, "pos":[13, 9], "direction":"left"
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵03-1", "union":"foe", "class":"long", "level":36, "pos":[13,13], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵03-2", "union":"foe", "class":"close", "level":36, "pos":[14,12], "direction":"left"
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵03-3", "union":"foe", "class":"mid", "level":36, "pos":[14,14], "direction":"left"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+
+[stageXX]
+
+{
+    "map": "region1",
+    "gimmicks": {
+        "start": {
+            "trigger": "started",
+            "command": {
+                "type": "batch",
+                "commands": [
+                    {
+                        "type": "appear",
+                        "unit": {
+                            "name":"味方01", "union":"ally", "class":"mid", "level":10, "pos":[ 5,10], "direction":"right", "brain":"input",
+                            "debugs":{"auto_brain":false}
+                        }
+                    },
+                    {
+                        "type": "appear",
+                        "unit": {
+                            "name":"味方02", "union":"ally", "class":"long", "level":10, "pos":[ 1, 7], "direction":"right",
+                            "debugs":{"auto_brain":false}
+                        }
+                    },
+                    {
+                        "type": "appear",
+                        "unit": {
+                            "name":"敵01", "union":"foe", "class":"close", "level":10, "pos":[ 9, 7], "direction":"left",
+                            "debugs":{"auto_brain":false}
+                        }
+                    },
+                    {
+                        "type": "appear",
+                        "unit": {
+                            "name":"敵02", "union":"foe", "class":"mid", "level":10, "pos":[ 7, 9], "direction":"left",
+                            "debugs":{"auto_brain":false}
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
+
+[stageXX]
+
+    {
+        "map": "plainfield",
+        "gimmicks": {
+            "start": {
+                "trigger": "started",
+                "command": {
+                    "type": "batch",
+                    "commands": [
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01", "union":"ally", "class":"long", "level":10, "pos":[ 4, 7], "direction":"right", "brain":"auto", "mission":{"type":"follow", "leader":"leader1"},
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02", "union":"ally", "class":"mid", "level":10, "pos":[ 3, 5], "direction":"right", "brain":"auto", "mission":{"type":"follow", "leader":"leader1"},
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方03", "union":"ally", "class":"mid", "level":10, "pos":[ 3, 9], "direction":"right", "brain":"input", "tags":["leader1"],
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方04", "union":"ally", "class":"close", "level":10, "pos":[ 2, 3], "direction":"right", "brain":"auto", "mission":{"type":"follow", "leader":"leader1"},
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方05", "union":"ally", "class":"close", "level":10, "pos":[ 2,11], "direction":"right", "brain":"auto", "mission":{"type":"follow", "leader":"leader1"},
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵01", "union":"foe", "class":"long", "level":10, "pos":[14, 7], "direction":"left", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵02", "union":"foe", "class":"mid", "level":10, "pos":[13, 5], "direction":"left", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵03", "union":"foe", "class":"mid", "level":10, "pos":[13, 9], "direction":"left", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵04", "union":"foe", "class":"close", "level":10, "pos":[12, 3], "direction":"left", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"敵05", "union":"foe", "class":"close", "level":10, "pos":[12,11], "direction":"left", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+
+[混成]
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01", "union":"ally", "class":"long", "level":10, "pos":[ 4, 7], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02", "union":"ally", "class":"mid", "level":10, "pos":[ 3, 5], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方03", "union":"ally", "class":"mid", "level":10, "pos":[ 3, 9], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方04", "union":"ally", "class":"close", "level":10, "pos":[ 2, 3], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方05", "union":"ally", "class":"close", "level":10, "pos":[ 2,11], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+
+[クローズ主体-ミッド補佐]
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方04", "union":"ally", "class":"close", "level":10, "pos":[ 2, 3], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02", "union":"ally", "class":"mid", "level":10, "pos":[ 3, 5], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01", "union":"ally", "class":"close", "level":10, "pos":[ 1, 7], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方03", "union":"ally", "class":"mid", "level":10, "pos":[ 3, 9], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方05", "union":"ally", "class":"close", "level":10, "pos":[ 2, 11], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+
+[ミッド主体-ロング補佐]
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方04", "union":"ally", "class":"mid", "level":10, "pos":[ 2, 3], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02", "union":"ally", "class":"long", "level":10, "pos":[ 3, 5], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01", "union":"ally", "class":"mid", "level":10, "pos":[ 1, 7], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方03", "union":"ally", "class":"long", "level":10, "pos":[ 3, 9], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方05", "union":"ally", "class":"mid", "level":10, "pos":[ 2, 11], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+
+[ロング主体-クローズ補佐]
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方04", "union":"ally", "class":"close", "level":10, "pos":[ 2, 3], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02", "union":"ally", "class":"long", "level":10, "pos":[ 3, 5], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01", "union":"ally", "class":"long", "level":10, "pos":[ 1, 7], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方03", "union":"ally", "class":"long", "level":10, "pos":[ 3, 9], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方05", "union":"ally", "class":"close", "level":10, "pos":[ 2, 11], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+
+[クローズ一色]
+
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方01", "union":"ally", "class":"close", "level":10, "pos":[ 4, 7], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方02", "union":"ally", "class":"close", "level":10, "pos":[ 3, 5], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方03", "union":"ally", "class":"close", "level":10, "pos":[ 3, 9], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方04", "union":"ally", "class":"close", "level":10, "pos":[ 2, 3], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+                        {
+                            "type": "appear",
+                            "unit": {
+                                "name":"味方05", "union":"ally", "class":"close", "level":10, "pos":[ 2,11], "direction":"right", "brain":"auto",
+                                "debugs":{"auto_brain":false}
+                            }
+                        },
+
+[rem]
+
+●ステージの記述について。
+
+    map             ステージマップの識別子。
+    music           BGM名
+    gimmicks        そのフロアに設置されているギミックを値、ギミック名をキーとして列挙するコレクション。
+
+●ギミック
+
+    ギミック名は自由に決められる。各ギミックは次のキーを持つ。
+
+        trigger     発動条件。省略した場合は自動的には発動しないギミックとなる。詳細は後述。
+        command     発動したときに実行されるステージコマンド。複数ある場合はbatchコマンドを使って記述する。
+        ornament    ギミックを表示するために使うシンボル種別。以下のいずれか。
+        permanent   trueにすると、発動しても残り続ける。
+        shorthand   一部の典型的ギミックのテンプレートを呼び出す。
+
+●発動条件
+
+    triggerキーで表される発動条件は次のキーを持つ構造体。ギミックが発動されるタイミングを表す。
+    typeキーのみを持つ構造体となる場合は、その値の文字列単体で指定することもできる。
+    値にオブジェクトを持っているコマンドは内部で使用しているもの。JSONで記述することは出来ない。
+
+    共通のキー
+        type        必ず存在する。まずはここを見て他のキーの意味を汲み取る。
+
+    type: started
+        シーンが開始されたとき。
+
+    type: into
+        ユニットが特定のブロックに侵入したとき。
+        block       ブロックの位置。[0]:X [1]:Y の二つの要素を持つ序数配列で指定する。
+        union       オプション。侵入したユニットがここで指定された所属コードを持つときのみ。
+
+    type: withdraw
+        ユニットが退出したとき。次のいずれかを指定する。
+        unit        対象のユニット。UnitExecutantオブジェクト。
+        tag         対象のユニットが持つタグ。
+        union       ここで指定された所属コードのユニットが全員いなくなった場合。
+
+●ステージコマンド
+
+    ステージコマンドはステージの制御命令を表す任意のキーからなる構造体。ギミックの記述としても現れるし、内部的な制御でも使われている。
+    値にオブジェクトを持っているコマンドは内部で使用しているもの。JSONで記述することは出来ない。
+    ユニットタスクとは似て非なるものなので注意。
+
+    共通のキー
+        type            必ず存在する。まずはここを見て他のキーの意味を汲み取る。
+
+    -- パラメータ管理系(発効されたらすぐ終了する)・特殊系
+
+        type: start
+            シーンが開始されるまで待機する。
+
+        type: call
+            指定されたオブジェクトの、特定のメソッドを呼び出す。
+            target      メソッドを持つオブジェクト。文字列の場合は...
+            method      呼び出すメソッド名
+            args        引数リストを表す配列
+
+        // type: wait
+        //     特定の事象が発生するまで待機する。
+        //     ant         ステージ素子にこの素子が存在している限り待機。
+
+        // type: remove
+        //     ギミックを取り除く。
+        //     target      対象ギミックのキー。
+
+        type: batch
+            複数のコマンドを同時に実行するためのコマンド。
+            commands    同時に実行するコマンドの配列。
+
+    -- ユニット管理系
+
+        type: appear
+            ユニットが一体登場する。
+            unit        登場するユニットの情報。後述。
+
+        type: turn
+            ユニットが一回行動する。
+            unit        対象のユニット。UnitExecutantオブジェクト。
+
+        type: move
+            ユニットが移動を行う。
+            unit        対象のユニット。UnitExecutantオブジェクト。
+            to          移動先のブロック。
+
+        type: action
+            ユニットが攻撃を行う。
+            thrower     攻撃を行うユニット。
+            catcher     受けるユニット。
+
+        type: disappear
+            ユニットが消失する。
+            unit        対象のユニット。UnitExecutantオブジェクト。
+            reason      消失理由。今のところ "die" のみ。
+
+    -- ステージ終了系(コマンド処理が完了することはない)
+
+        type: goal
+            ゲームクリア
+
+        type: miss
+            ゲームオーバー
+
+    -- その他
+
+        type: popup
+            一枚絵をポップアップする。タップされるまで終了しない。チュートリアルで使用する。
+            graph       表示するグラフィック。
+
+●ユニット
+
+    ユニットの情報は次の構造体で指定する。
+
+    name        ユニット名
+    tags        特定のユニットに付ける目印の配列。
+    union       所属勢力。"ally", "foe" のいずれか。
+    class       ユニット種別。"close", "mid", "long" のいずれか。
+    level       レベル。
+    pos         登場位置。[0]:X [1]:Y の二つの要素を持つ序数配列で指定する。
+    direction   登場時の左右の向き。"left" か "right"。
+    brain       行動ルーチン。プレイヤー入力の場合は "input"、NPCの場合は "auto"。省略時は "auto"。
+    mission     "auto" の場合に、特定任務を表す以下の構造体。
+        type        今のところ「随伴」を表す "follow" のみ
+        leader      随伴対象のユニットがもつタグ。該当タグを持っているユニットが複数いる場合は最初に見つけたものが対象になる。
+    debugs      デバッグフラグ
+        auto_brain      AutoBrainの処理についてデバッグ出力する。
+    specs
+        hp          HP
+        legs        移動力
+        range       射程
+        accuracy    命中
+        avoidance   回避
+        attack      攻撃力(合計。回数の乗算後の値)
+        firecount   攻撃回数
+
+    ○ユニットパラメータのショートハンド
+
+        ユニットパラメータの specs は class, level からデフォルト値が設定されるし、brain は union からデフォルト値が決定される。
+        しかし明示的に設定されているキーはそちらが優先となる。
+
+    ○思考ルーチンの意思決定処理について
+
+        1. "汎用" の思考を行う。
+            すべての敵(自分・味方へもアクションが可能なら、加えてすべての味方)への全アクションの "意思pt" を計算する。
+
+        2. 0以上の数設定できる "任務" が与えられている場合はそれぞれの "意思pt" を計算する。
+            任務は例えば「規定の軌道のパトロール(徘徊・待機含む)」「随伴」「特定位置の警戒」など。
+            それぞれ意思pt計算式とパラメータを持つ。初期ptに加えて、例えば「特定位置の警戒」なら、その位置からどのくらい離れてしまっているか、など
+
+        3. 一番意思ptが高い選択肢を選んで行動する。
+
+        汎用行動の意思ptは次のように計算する。
+
+            ・効果pt = 命中率 * 予測ダメージ / 相手最大HP * 3700
+                平均的な攻撃一回あたりが、63% * 48pt / 最大HP110 = 0.27。これが大体 1000 になるような式。
+                命中率が半分になるとか、最大HPが倍あるとか、倍強い敵だと効果ptは半分の 500 になる。
+                ※相手攻撃力とかは…ヘイトに織り込まれるんじゃないかな？
+
+            ・射程到達移動コスト / 自分の移動力 (=所要ターン数) * 切り上げ - 1 = 必要無駄移動Ｔ数
+                誘因pt = 効果pt / [無駄移動Ｔ数 + 1]
+              で、Ｔ数1で /2、Ｔ数2で /3、Ｔ数3で /4、...
+
+              つまり、現在射程圏にいる敵よりも半分の強さしかない(=効果ptが2.0倍の)敵が、1Ｔの無駄移動で射程圏に入るならそちらを狙うようになる。
+
+            ・あとは、誘因pt + ヘイト = 意思pt とすると...
+                「ヘイトが1000たまると、1Ｔ無駄移動してでも狙うようになる」。
+
+        任務行動の意思ptについては行動ごとに計算式を作る。まあ必要になる都度ルール作成…か。
+
+        将来的にはこれに加えて「統合意思」が必要と思われる。それがないと例えば、危機に瀕した味方の回復に、一人の回復役が向かえば充分なのに複数の回復役が向かうことになってしまう。
+        まあ随分先の話と思うが…
+
+●ユニットタスク
+
+    一つのユニットの細かい制御を表すタスク。
+    ユニットタスクは一つのユニットの内部で管理され主にそのユニットの細かい制御を司るのに対して、ステージコマンドはステージ全体の進行を司るために大きな単位で発行される。
+    たとえばユニットに一マス動くように命令するStepTaskはユニットタスクだが、ユニットに一回の行動を行うように命令するTurnCommandはステージコマンドとなる。
+
+    共通のキー
+        type        必ず存在する。まずはここを見て他のキーの意味を汲み取る。
+
+    type: step
+        一マス移動する。移動するのは表示上のブロックであり、論理上の所在ブロックは変わらないので注意。
+        dir         移動方向を表す文字。1:上, 3:左, 5:右, 7:下 のいずれか。
+
+    type: motion
+        モーションを変更する。
+        change      変更後のモーション名
+
+    type: wait
+        特定のタイミングまで待機する。
+        signal      ここで指定された名前のシグナルがONになるまで待機する。
+
+    type: voila
+        指定されたボックスに指定されたエフェクトをセットする。
+        effect      エフェクトの種類。以下のいずれか。
+                        swordlag        剣の残像
+                        gunfire         銃火
+                        cannonfire      砲火
+                        slash           斬撃
+                        shoteye         弾痕
+                        explosion       爆発
+
+    type: ring
+        指定された効果音を再生する。
+        sound       サウンドリソース名
+
+    type: valpop
+        ダメージなどの数値をポップアウトする。
+        value       数値。nullの場合は "miss" と表示される。
+        sequence    複数同時に表示する場合に、重ならないようにするための 0 から始まる連番。
+
+    type: spec
+        HPなどのパラメータが変化する。
+        what        変化するパラメータ名
+        slide       増減値。減るならマイナス。
+
+    type: kick
+        指定された関数を呼び出す。
+        func        呼び出す関数。引数やthisは bind() を使ってセットすると良いだろう。
+                    文字列で指定した場合はユニットの該当メソッドを呼び出す。

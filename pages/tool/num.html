@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <style type="text/css"><!--
+
+    --></style>
+
+    <script type="text/javascript" src="lib/include.js"></script>
+    <script type="text/javascript"><!--
+
+        "use strict";
+
+        function go() {
+
+            // セルのサイズと縦横セル数
+            const SIZE = 32, NUMX = 10, NUMY = 100;
+
+            // 各桁を描画するときのX位置。上から一桁の場合、二桁の場合、...
+            const OFFSET = [
+                     [16],
+                   [10, 22],
+                  [7, 16, 25],
+                [7, 13, 19, 25],
+            ];
+
+            // 描画先の canvas を作成。
+            var canvas = document.createElement("canvas");
+            canvas.width = SIZE * NUMX;
+            canvas.height = SIZE * NUMY;
+            var context = canvas.getContext("2d");
+
+            // レタリングの設定。
+            context.font = `24px "monospace"`;
+            context.textBaseline = "middle";
+            context.textAlign = "center";
+            context.lineWidth = 2;
+            context.strokeStyle = "black";
+            context.fillStyle = "white";
+
+            // 一セルずつ描画していく。
+            for(var y = 0 ; y < NUMY ; y++) {
+                for(var x = 0 ; x < NUMX ; x++) {
+
+                    // 描画する数字を取得。1000までとする。
+                    var n = y*NUMX + x + 1;
+                    if(n > 1000)  break;
+
+                    // 描画する数字を桁ごとに分割。
+                    var figs = n.toString().split("");
+
+                    // 桁ごとの描画X位置を取得。
+                    var offset = OFFSET[figs.length-1];
+
+                    // 一の位から登りながら描画していく。
+                    for(var i = figs.length-1 ; i >= 0 ; i--) {
+                        context.strokeText(figs[i], x*SIZE + offset[i], y*SIZE + SIZE/2 + 2);
+                        context.fillText(figs[i], x*SIZE + offset[i], y*SIZE + SIZE/2 + 2);
+                    }
+                }
+            }
+
+            // 作成したキャンバスの内容を <img> に表示。
+            document.getElementById("img").src = canvas.toDataURL();
+        }
+
+        function go2() {
+
+        }
+
+    --></script>
+
+  </head>
+
+  <body>
+
+    <button onclick="go()">go</button><button onclick="go2()">go2</button><br />
+
+    <p><img id="img" /></p>
+
+  </body>
+</html>
+

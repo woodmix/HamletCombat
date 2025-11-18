@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <style type="text/css"><!--
+
+    --></style>
+
+    <script type="text/javascript" src="lib/include.js"></script>
+    <script type="text/javascript"><!--
+
+        "use strict";
+
+        function go() {
+
+            // セルのサイズと横セル数
+            const SIZE = 32, DIRS = 4;
+            const COUNT = 1 << DIRS;
+            const NUMX = 4, NUMY = Math.ceil(COUNT/NUMX);
+
+            // 描画先の canvas を作成。
+            var canvas = document.createElement("canvas");
+            canvas.width = SIZE * NUMX;
+            canvas.height = SIZE * NUMY;
+            var context = canvas.getContext("2d");
+
+            // レタリングの設定。
+            context.lineCap = "round";
+
+            // 一セルずつ描画していく。
+            for(var y = 0 ; y < NUMY ; y++) {
+                for(var x = 0 ; x < NUMX ; x++) {
+
+                    // 描画する壁種別を数値で取得。
+                    var n = y*NUMX + x + 1;
+                    if(n > COUNT)  break;
+
+                    // 外側の線を引く。
+                    context.lineWidth = 4;
+                    context.strokeStyle = "blue";
+                    drawLines(context, x*SIZE, y*SIZE, SIZE, n);
+
+                    // 内側の線を引く。
+                    context.lineWidth = 2;
+                    context.strokeStyle = "hotpink";
+                    drawLines(context, x*SIZE, y*SIZE, SIZE, n);
+                }
+            }
+
+            // 作成したキャンバスの内容を <img> に表示。
+            document.getElementById("img").src = canvas.toDataURL();
+        }
+
+        // 指定された数値の線を引く。
+        function drawLines(context, x, y, SIZE, n) {
+
+            const MARGIN = 4;
+
+            if(n & 0b0001) {
+                context.beginPath();
+                context.moveTo(x + MARGIN, y + MARGIN);
+                context.lineTo(x + SIZE - MARGIN, y + MARGIN);
+                context.stroke();
+            }
+
+            if(n & 0b0010) {
+                context.beginPath();
+                context.moveTo(x + MARGIN, y + SIZE - MARGIN);
+                context.lineTo(x + MARGIN, y + MARGIN);
+                context.stroke();
+            }
+
+            if(n & 0b0100) {
+                context.beginPath();
+                context.moveTo(x + SIZE - MARGIN, y + MARGIN);
+                context.lineTo(x + SIZE - MARGIN, y + SIZE - MARGIN);
+                context.stroke();
+            }
+
+            if(n & 0b1000) {
+                context.beginPath();
+                context.moveTo(x + SIZE - MARGIN, y + SIZE - MARGIN);
+                context.lineTo(x + MARGIN, y + SIZE - MARGIN);
+                context.stroke();
+            }
+        }
+
+        function go2() {
+
+        }
+
+    --></script>
+
+  </head>
+
+  <body>
+
+    <button onclick="go()">go</button><button onclick="go2()">go2</button><br />
+
+    <p><img id="img" /></p>
+
+  </body>
+</html>
+

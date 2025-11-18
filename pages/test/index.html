@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="appicon128.png">
+    <link type="text/css" rel="stylesheet" href="pages/page.css" />
+    <title>てすと</title>
+
+    <style type="text/css"><!--
+
+    --></style>
+
+    <script type="text/javascript" src="lib/include.js"></script>
+    <script type="text/javascript" src="pages/test/Test.js"></script>
+    <script type="text/javascript"><!--
+
+      var Settings = {
+          "debug": true,                       // デバッグモードかどうか。
+      };
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+
+          // デバッグ時は <body> に class="debug" を付ける。
+          if(Settings["debug"])
+              document.body.classList.add("debug");
+
+          new TestLoader("canvas");
+      });
+
+      //---------------------------------------------------------------------------------------------------------
+      class TestLoader extends LoaderScene {
+
+          _constructor(canvas) {
+              super._constructor(canvas);
+
+              this.layer = 0;
+              this.behaviors.set( new FillRenderer("black") );
+
+              this.childs.set(new LoadingRemain(), "remain");
+          }
+
+          load() {
+              Asset.loadAll(
+                  "art/test/laala.jpg",
+                  "art/test/mzm.jpg",
+                  "art/test/icon_256.png",
+                  "art/test/packman.png",
+                  "art/test/button.png",
+                  "art/test/levitate.wav",
+                  "art/test/WhIte.mp3",
+                  "art/test/numbers.png",
+                  "art/test/siba.x2.3&4.png",
+                  "art/test/explosion.4&2.png",
+              );
+          }
+
+          loadout(canvas) {
+
+              console.log("asset loaded");
+
+              Test.instance = new Test(canvas);
+
+              return Test.instance;
+          }
+      }
+
+    --></script>
+
+  </head>
+
+  <body>
+
+    <canvas class="full" id="canvas"></canvas>
+
+    <div id="debug">
+      <button onclick="var scene = EngageScene.currentEngaged; scene.debugstop=false; scene.start()">start</button>
+      <button onclick="EngageScene.currentEngaged.stop()">stop</button>
+      <button onclick="location.reload()">reload</button>
+      <button onclick="var scene = EngageScene.currentEngaged; scene.debugstop=true; scene.tick(scene.now + 10)">tick(10)</button>
+      <button onclick="test()">test</button>
+      <button onclick="test2()">test2</button>
+      <button onclick="console.log(EngageScene.currentEngaged.dump()); console.log(EngageScene.currentEngaged)">dump</button>
+    </div>
+
+  </body>
+</html>

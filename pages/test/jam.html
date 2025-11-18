@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <style type="text/css"><!--
+
+    --></style>
+
+    <script type="text/javascript" src="lib/include.js"></script>
+    <script type="text/javascript"><!--
+
+        "use strict";
+
+        function go() {
+
+            // 入力されたパスを取得。
+            var path = document.getElementById("path").value;
+
+            // 入力されたパスのファイルをロード。完了したら...
+console.log(path);
+            var res = new ImageResource(path);
+            res.start();
+            res.promise.then((image)=>{
+
+console.log("yeah");
+                // ジャミングの方向を取得。
+                var method = document.getElementById("jam").checked ? "jamRegularly" : "dejamRegularly";
+
+                // 実行。
+                var jammed = JammedResource[method](image);
+                document.getElementById("result").src = jammed.toDataURL();
+            });
+        }
+
+    --></script>
+
+  </head>
+
+  <body>
+
+    <form onsubmit="go(); return false">
+      <label for="jam"><input id="jam" type="radio" name="toggle" checked="checked" />jam</label>
+      <label for="dejam"><input id="dejam" type="radio" name="toggle" />dejam</label>
+      <input id="path" type="text" value="art/" onfocus="this.select()" />
+      <button type="submit">go</button>
+    </form>
+
+    <p><img id="result" style="border:1px solid" /></p>
+
+  </body>
+</html>
+

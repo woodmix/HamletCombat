@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <style type="text/css"><!--
+
+    --></style>
+
+    <script type="text/javascript" src="lib/include.js"></script>
+    <script type="text/javascript"><!--
+
+        "use strict";
+
+//         var img = new Image();
+//         img.src = "art/test/icon_256.png";
+//         img.src = "art/test/siba.x2.3&4.png";
+
+//         Asset.load("art/test/laala.jpg");
+//         Asset.load("art/test/siba.x2.3&4.png");
+//         Asset.load("art/test/icon_256.png");
+        Asset.load("art/music/WhIte.mp3",);
+//         Asset.load("art/test/levitate.wav");
+//         Asset.load("art/map.txt");
+//         Asset.load("art/map4.txt");
+
+        Asset.getFinishPromise().then( ()=>console.log('finish') );
+
+        var canvas, context;
+        document.addEventListener("DOMContentLoaded", ()=>{
+            canvas = document.getElementById("canvas");
+            context = canvas.getContext("2d");
+        });
+
+        function go() {
+
+            Acousmato.playMusic("WhIte");
+        }
+
+        function go2() {
+
+            var m = Asset.take("WhIte");
+
+            m.fade("out", 3000);
+        }
+
+    --></script>
+
+  </head>
+
+  <body>
+
+    <button onclick="go()">go</button><button onclick="go2()">go2</button>
+
+    <canvas id="canvas" width="1000" height="1000" style="background-color:aliceblue"></canvas>
+
+  </body>
+</html>
+

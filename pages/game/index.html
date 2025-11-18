@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="appicon.png">
+    <link type="text/css" rel="stylesheet" href="pages/page.css" />
+    <title>ハムレットコンバット</title>
+
+    <style type="text/css"><!--
+
+    --></style>
+
+    <script src="lib/include.js"></script>
+    <script defer src="pages/game/GameLoader.js"></script>
+    <script type="text/javascript"><!--
+
+      var Settings = {
+          "debug": false,    // デバッグモードかどうか。
+      };
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+
+          // デバッグ時は <body> に class="debug" を付ける。
+          if(Settings["debug"])
+              document.body.classList.add("debug");
+
+          new GameLoader("canvas");
+
+          // なんとかアドレスバーに引っ込んでもらうためのもの。…だが、もはや効かない。タイトル画面に全画面ボタン付けるべき
+          // window.scrollTo(0,0);
+          // setTimeout(function(){
+          //     window.scrollTo(0,100);
+          // }, 3000);
+      });
+
+      function test() {
+      }
+
+      function test2() {
+      }
+
+    --></script>
+
+  </head>
+
+  <body>
+
+    <canvas class="full" id="canvas"></canvas>
+
+    <div id="debug">
+      <button onclick="EngageScene.currentEngaged.start()">start</button>
+      <button onclick="EngageScene.currentEngaged.stop()">stop</button>
+      <button onclick="location.reload()">reload</button>
+      <button onclick="EngageScene.currentEngaged.tick(EngageScene.currentEngaged.now + 10)">tick(10)</button>
+      <button onclick="test()">test</button>
+      <button onclick="test2()">test2</button>
+      <button onclick="console.log(EngageScene.currentEngaged.dump()); console.log(EngageScene.currentEngaged)">dump</button>
+    </div>
+
+  </body>
+</html>
